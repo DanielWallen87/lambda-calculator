@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
+import { numbers } from "../../../data";
 
-const NumberButton = () => {
+export const NumberButton = () => {
   return (
     <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
+      {/* Display a button element rendering the data being passed down from the parent container on props */
+      <button className="NumberButton"></button>
+      }
     </>
   );
 };
+
+export default NumberButton;
