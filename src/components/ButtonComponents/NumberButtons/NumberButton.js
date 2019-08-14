@@ -1,14 +1,18 @@
-import React, {useState} from "react";
-import { numbers } from "../../../data";
+import React, { useState } from "react";
+import { numbers } from "../../../data.js";
 
-export const NumberButton = () => {
+const NumberButton = (props) => {
+
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */
-      <button className="NumberButton"></button>
-      }
-    </>
+    <div class="NumbersContainer">          {/*fragments are used to group up our JSX * -- also note weird comment syntax*/}
+      <button className="Numbers" onClick={() => props.addNumber(props.text)}>
+        {props.text}
+      </button>
+    </div>
   );
 };
 
+// export button so it can be used elsewhere in app
+
 export default NumberButton;
+

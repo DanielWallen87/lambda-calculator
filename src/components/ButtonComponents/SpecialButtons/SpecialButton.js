@@ -1,14 +1,21 @@
-import React, {useState} from "react";
-import { specials } from "../../../data";
+import React, { useState } from "react";
+// import react and use state so we can change based on input
 
-const SpecialButton = () => {
+import { specials } from "../../../data";
+// import special characters so they can be used on button
+
+const SpecialButton = (props) => {
   return (
+    //use fragments to group our JSX together
     <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */
-        <button className="SpecialButton"></button>
-      }
+    {/*Create button element on which to place prop text*/}
+      <button>
+        {props.text}
+      </button>
     </>
   );
 };
+
+// export button so it can be used elsewhere in app
 
 export default SpecialButton;
